@@ -35,6 +35,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewMarca" />
 
+    <TextView
+        android:id="@+id/textViewPreco"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="69dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewAno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMarca"
+        tools:text="100£" />
 
 
 </android.support.constraint.ConstraintLayout>
