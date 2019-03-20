@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="nome_marca">nome marca</string>
     <string name="_2019">2019</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_registos">RegistosActivity</string>
 </resources>
