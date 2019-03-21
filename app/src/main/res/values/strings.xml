@@ -5,4 +5,8 @@
     <string name="_2019">2019</string>
     <string name="ok">OK</string>
     <string name="title_activity_registos">RegistosActivity</string>
+    <string name="minhascole_es">MinhasColeções</string>
+    <string name="marca">Marca</string>
+    <string name="preco">Preco</string>
+    <string name="ano">Ano</string>
 </resources>

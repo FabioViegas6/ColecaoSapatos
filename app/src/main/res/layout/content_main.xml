@@ -19,9 +19,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="23"
-        android:hint="Marca"
-        android:inputType="textShortMessage|textAutoCorrect"
+
+        android:text="@string/minhascole_es"
+        android:textColor="@color/colorAccent"
         android:textColorLink="@color/colorAccent"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
