@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 public class RegistosActivity extends AppCompatActivity {
 
@@ -25,6 +26,19 @@ public class RegistosActivity extends AppCompatActivity {
     }
 
     public void Save(View view) {
+
+        EditText textInputLayoutMarca = (EditText) findViewById(R.id.editTextMarca);
+        EditText montante = (EditText) findViewById(R.id.editTestPreco);
+
+        String nomemarca = textInputLayoutMarca.getText().toString();
+
+        if(nomemarca.trim().length() == 0) {
+            textInputLayoutMarca.setError("Campo obrigatorio");
+            textInputLayoutMarca.requestFocus();
+            return;
+        }
+        finish();
+
 
     }
 }

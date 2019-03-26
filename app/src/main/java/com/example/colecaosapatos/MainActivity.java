@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void Inserir(View view) {
 
+
+
         Intent intent = new Intent(this, RegistosActivity.class);
         startActivity(intent);
 
