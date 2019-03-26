@@ -9,4 +9,5 @@
     <string name="marca">Marca</string>
     <string name="preco">Preco</string>
     <string name="ano">Ano</string>
+    <string name="novoregisto">NovoRegisto</string>
 </resources>

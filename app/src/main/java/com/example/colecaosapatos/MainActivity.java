@@ -1,5 +1,6 @@
 package com.example.colecaosapatos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -45,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Inserir(View view) {
-        Toast.makeText(this, "Nike", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, RegistosActivity.class);
+        startActivity(intent);
+
 
     }
 }
