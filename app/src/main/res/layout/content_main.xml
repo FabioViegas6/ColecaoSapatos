@@ -21,7 +21,7 @@
         android:ems="23"
 
         android:text="@string/minhascole_es"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
         android:textColorLink="@color/colorAccent"
         android:textSize="30sp"
         android:textStyle="bold|italic"
