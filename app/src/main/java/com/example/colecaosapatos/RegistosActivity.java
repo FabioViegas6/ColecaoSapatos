@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class RegistosActivity extends AppCompatActivity {
 
@@ -28,6 +29,7 @@ public class RegistosActivity extends AppCompatActivity {
 
 
     public void Save(View view) {
+        
 
         EditText textInputLayoutMarca = (EditText) findViewById(R.id.editTextMarca);
         EditText editTestPreco = (EditText) findViewById(R.id.editTestPreco);
@@ -40,15 +42,20 @@ public class RegistosActivity extends AppCompatActivity {
         if(nomemarca.trim().length() == 0) {
             textInputLayoutMarca.setError("Campo Obrigatorio" );
             textInputLayoutMarca.requestFocus();
+            return;
         }else if(montante.trim().length() == 0) {
             editTestPreco.setError("Campo obrigatorio");
             editTestPreco.requestFocus();
-        }else if (ano.trim().length() ==0){
+            return;
+        }else if(ano.trim().length() == 0){
             editTextAno.setError("Campo Obrigatorio");
             editTextAno.requestFocus();
             return;
         }
-       // finish();
+        Toast.makeText(this, "Salvo", Toast.LENGTH_LONG).show();
+        finish();
+        return;
+
 
 
     }
