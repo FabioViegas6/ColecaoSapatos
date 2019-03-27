@@ -29,7 +29,7 @@ public class RegistosActivity extends AppCompatActivity {
 
 
     public void Save(View view) {
-        
+
 
         EditText textInputLayoutMarca = (EditText) findViewById(R.id.editTextMarca);
         EditText editTestPreco = (EditText) findViewById(R.id.editTestPreco);
@@ -52,9 +52,14 @@ public class RegistosActivity extends AppCompatActivity {
             editTextAno.requestFocus();
             return;
         }
-        Toast.makeText(this, "Salvo", Toast.LENGTH_LONG).show();
-        finish();
-        return;
+
+        if (nomemarca.trim().length() > 0 | montante.trim().length()>0 | ano.trim().length()>0){
+            Toast.makeText(this, "Dados Salvo com Sucesso", Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
+        Toast.makeText(this, "Não Foi Possivel Salvar Os Dados", Toast.LENGTH_SHORT).show();
+
 
 
 
