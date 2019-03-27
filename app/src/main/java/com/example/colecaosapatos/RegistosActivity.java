@@ -25,20 +25,33 @@ public class RegistosActivity extends AppCompatActivity {
         finish();
     }
 
+
+
     public void Save(View view) {
 
         EditText textInputLayoutMarca = (EditText) findViewById(R.id.editTextMarca);
-        EditText montante = (EditText) findViewById(R.id.editTestPreco);
+        EditText editTestPreco = (EditText) findViewById(R.id.editTestPreco);
+        EditText editTextAno = (EditText) findViewById(R.id.editTextAno);
 
         String nomemarca = textInputLayoutMarca.getText().toString();
+        String montante = editTestPreco.getText().toString();
+        String ano = editTextAno.getText().toString();
 
         if(nomemarca.trim().length() == 0) {
-            textInputLayoutMarca.setError("Campo obrigatorio");
+            textInputLayoutMarca.setError("Campo Obrigatorio" );
             textInputLayoutMarca.requestFocus();
+        }else if(montante.trim().length() == 0) {
+            editTestPreco.setError("Campo obrigatorio");
+            editTestPreco.requestFocus();
+        }else if (ano.trim().length() ==0){
+            editTextAno.setError("Campo Obrigatorio");
+            editTextAno.requestFocus();
             return;
         }
-        finish();
+       // finish();
 
 
     }
+
+
 }
