@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">ColecaoSapatos</string>
+    <string name="app_name">Shoes Collection</string>
     <string name="action_settings">Settings</string>
     <string name="nome_marca">nome marca</string>
     <string name="_2019">2019</string>
     <string name="ok">OK</string>
-    <string name="title_activity_registos">RegistosActivity</string>
-    <string name="minhascole_es">MinhasColeções</string>
-    <string name="marca">Marca</string>
-    <string name="preco">Preco</string>
-    <string name="ano">Ano</string>
-    <string name="novoregisto">NovoRegisto</string>
+    <string name="title_activity_registos">RegisterActivity</string>
+    <string name="minhascole_es">MyCollection</string>
+    <string name="marca">Brand</string>
+    <string name="preco">Pric</string>
+    <string name="ano">Year</string>
+    <string name="novoregisto">NewRegister</string>
 </resources>

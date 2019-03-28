@@ -44,7 +44,7 @@ public class RegistosActivity extends AppCompatActivity {
             textInputLayoutMarca.requestFocus();
             return;
         }else if(montante.trim().length() == 0) {
-            editTestPreco.setError("Campo obrigatorio");
+            editTestPreco.setError("introduz o Preço");
             editTestPreco.requestFocus();
             return;
         }else if(ano.trim().length() == 0){
