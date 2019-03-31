@@ -92,6 +92,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="@dimen/marginPadrao"
         android:ems="12"
+        android:onClick="ListarTodos"
         android:text="@string/listar_todos"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/buttonNovoRegisto"

@@ -1,5 +1,6 @@
 package com.example.colecaosapatos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -51,6 +52,10 @@ public class RegistosActivity extends AppCompatActivity {
             editTextAno.setError("Campo Obrigatorio");
             editTextAno.requestFocus();
             return;
+
+
+
+
         }
 
         if (nomemarca.trim().length() > 0 | montante.trim().length()>0 | ano.trim().length()>0){
@@ -61,6 +66,9 @@ public class RegistosActivity extends AppCompatActivity {
         Toast.makeText(this, "Não Foi Possivel Salvar Os Dados", Toast.LENGTH_SHORT).show();
 
 
+        ///Intent intent = new Intent(this, ListaActivity.class);
+
+        //startActivity(intent);
 
 
     }
