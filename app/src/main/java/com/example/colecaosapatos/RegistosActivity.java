@@ -1,13 +1,19 @@
 package com.example.colecaosapatos;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
 
 public class RegistosActivity extends AppCompatActivity {
 
@@ -20,7 +26,15 @@ public class RegistosActivity extends AppCompatActivity {
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        /**
+         * @return função data
+         */
+        FuncaoData();
+
     }
+
+
 
     public void Cancel(View view) {
         finish();
@@ -35,9 +49,11 @@ public class RegistosActivity extends AppCompatActivity {
         EditText editTestPreco = (EditText) findViewById(R.id.editTestPreco);
         EditText editTextAno = (EditText) findViewById(R.id.editTextAno);
 
+
         String nomemarca = textInputLayoutMarca.getText().toString();
         String montante = editTestPreco.getText().toString();
         String ano = editTextAno.getText().toString();
+
 
         if(nomemarca.trim().length() == 0) {
             textInputLayoutMarca.setError("Campo Obrigatorio" );
@@ -53,17 +69,81 @@ public class RegistosActivity extends AppCompatActivity {
             return;
         }
 
+
+        Date data = new Date();
+        Intent intent = new Intent(this, ApresentacaoActivity.class);
+
+
+        // todo: Para apresentar as marcas
+
+        intent.putExtra(ApresentacaoActivity.MARCA, nomemarca);
+        startActivity(intent);
+
+        // todo: Para apresentar o preço
+
+        intent.putExtra(ApresentacaoActivity.MONTANTE, montante);
+        startActivity(intent);
+
+        // todo: Para apresentar os anos
+
+        //intent.putExtra(ApresentacaoActivity.DATA, data);
+        intent.putExtra(ApresentacaoActivity.DATA, ano);
+        startActivity(intent);
+
+
+
+        /**
+         *
+         * Para mostrar que os dados foram guardados
+         */
+
         if (nomemarca.trim().length() > 0 | montante.trim().length()>0 | ano.trim().length()>0){
             Toast.makeText(this, "Dados Salvo com Sucesso", Toast.LENGTH_LONG).show();
             finish();
             return;
         }
-        Toast.makeText(this, "Não Foi Possivel Salvar Os Dados", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Não Foi Possivel Salvar Os Dados", Toast.LENGTH_LONG).show();
+
+        //////////////////////////
 
 
 
 
     }
+    private void FuncaoData() {
+        int dia = Day();
+        int mes = MES();
+        int anos = ANO();
 
+
+        TextView editTextAno = (TextView) findViewById(R.id.editTextAno);
+        editTextAno.setText(""+anos+"/"+"0"+mes+"/"+"0"+dia);
+
+
+    }
+
+
+    private int Day(){
+        Calendar d = Calendar.getInstance();
+        int dia = d.get(Calendar.DAY_OF_MONTH);
+        return dia;
+    }
+
+
+    private int MES(){
+
+        Calendar m = Calendar.getInstance();
+        int mes = m.get(Calendar.MONTH)+1;
+        return mes;
+
+    }
+
+
+    private int ANO(){
+        Calendar a = Calendar.getInstance();
+        int ano = a.get(Calendar.YEAR);
+        return ano;
+
+    }
 
 }

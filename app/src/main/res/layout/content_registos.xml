@@ -73,7 +73,8 @@
             android:id="@+id/editTestPreco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Preço" />
+            android:hint="Preço"
+            android:inputType="numberDecimal"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -93,7 +94,8 @@
             android:id="@+id/editTextAno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ano" />
+            android:hint="Ano"
+            android:inputType="date"/>
     </android.support.design.widget.TextInputLayout>
 
     <Button

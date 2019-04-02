@@ -59,9 +59,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void apresentacaoMarca() {
-        // Intent intent = getIntent();
+         Intent intent = getIntent();
         listarDados = (RecyclerView) findViewById(R.id.recyclerViewMarca);
-
 
 
 
@@ -73,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         Intent intent = new Intent(this, RegistosActivity.class);
-       // intent.putExtra(ApresentacaoActivity.MARCA, )
         startActivity(intent);
 
 
