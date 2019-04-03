@@ -79,4 +79,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void ListarTodos(View view) {
+
+        Intent intent = new Intent(this, ListaActivity.class);
+      // intent.putExtra(ListaActivity.MARCA, )
+        startActivity(intent);
+    }
 }
