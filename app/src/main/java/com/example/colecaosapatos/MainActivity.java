@@ -3,17 +3,12 @@ package com.example.colecaosapatos;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,28 +57,19 @@ public class MainActivity extends AppCompatActivity {
          Intent intent = getIntent();
         listarDados = (RecyclerView) findViewById(R.id.recyclerViewMarca);
 
-
-
     }
 
 
     public void Inserir(View view) {
 
-
-
-        Intent intent = new Intent(this, RegistosActivity.class);
+        Intent intent = new Intent(this, RegistoActivity.class);
         startActivity(intent);
-
-
-
 
 
     }
 
     public void ListarTodos(View view) {
 
-        Intent intent = new Intent(this, ListaActivity.class);
-      // intent.putExtra(ListaActivity.MARCA, )
-        startActivity(intent);
+
     }
 }

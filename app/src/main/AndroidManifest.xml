@@ -9,10 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListaActivity"></activity>
         <activity android:name=".ApresentacaoActivity" />
         <activity
-            android:name=".RegistosActivity"
+            android:name=".RegistoActivity"
             android:label="@string/title_activity_registos"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

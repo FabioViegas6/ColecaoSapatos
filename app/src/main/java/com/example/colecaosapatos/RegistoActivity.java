@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Date;
 
-public class RegistosActivity extends AppCompatActivity {
+public class RegistoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
