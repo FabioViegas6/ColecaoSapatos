@@ -62,7 +62,7 @@ public class RegistoActivity extends AppCompatActivity {
         }
 
 
-        Intent intent = new Intent(this, ApresentacaoActivity.class);
+        Intent intent = new Intent(this, ListarTodosActivity.class);
         Date date = new Date();
 
         // todo: para apresentar a marca

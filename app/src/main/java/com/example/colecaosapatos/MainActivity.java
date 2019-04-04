@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void ListarTodos(View view) {
 
+        Intent intent = new Intent(this, ListarTodosActivity.class);
+        startActivity(intent);
 
     }
 }

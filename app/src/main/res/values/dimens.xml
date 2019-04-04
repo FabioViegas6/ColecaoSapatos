@@ -2,4 +2,5 @@
     <dimen name="marginPadrao">16dp</dimen>
     <dimen name="maginter">140dp</dimen>
     <dimen name="marginSecun">32dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

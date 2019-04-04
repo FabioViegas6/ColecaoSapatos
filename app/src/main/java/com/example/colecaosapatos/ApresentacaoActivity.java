@@ -30,58 +30,24 @@ public class ApresentacaoActivity extends AppCompatActivity {
 
     private void ApresentarMarca() {
 
-         // int dia = Day() ;
-       //  int mes = MES() ;
-     //    int anos = ANO();
-
-        Intent intent = getIntent();
-
-        String marcas = intent.getStringExtra(ApresentacaoActivity.MARCA);
-        String preco = intent.getStringExtra(ApresentacaoActivity.MONTANTE);
-        String data = intent.getStringExtra(ApresentacaoActivity.DATA);
-
-        TextView textViewMarca = (TextView) findViewById(R.id.textViewMarca);
-        TextView textViewPreco = (TextView) findViewById(R.id.textViewPreco);
-         TextView textViewAno = (TextView) findViewById(R.id.textViewAno);
-
-
-        textViewMarca.setText(marcas);
-        textViewPreco.setText(preco + "$");
-         textViewAno.setText(data);
-
-         return;
 
 
 
 
 
-        // Date ano = (Date) intent.getSerializableExtra(ApresentacaoActivity.DATA);
-        // String Ano = intent.getStringExtra(ApresentacaoActivity.DATA);
-        //  TextView textViewAno = (TextView) findViewById(R.id.textViewano);
-        // textViewAno.setText(ano.toString());
+
+
     }
 
-    /**
-    @TargetApi(Build.VERSION_CODES.N)
-    private int Day(){
-        Calendar d = Calendar.getInstance();
-        int dia = d.get(Calendar.DAY_OF_MONTH);
-        return dia;
+    public void SIM(View view) {
+
+
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
-    private int MES(){
-        Calendar m = Calendar.getInstance();
-        int mes = m.get(Calendar.MONTH)+1;
-        return mes;
+    public void NAO(View view) {
+        finish();
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
-    private int ANO(){
-        Calendar a = Calendar.getInstance();
-        int ano = a.get(Calendar.YEAR);
-        return ano;
-    }
- */
+
 
 }
