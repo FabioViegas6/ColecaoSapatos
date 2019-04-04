@@ -32,7 +32,7 @@ public class RegistoActivity extends AppCompatActivity {
 
 
     public void Cancel(View view) {
-        
+
         finish();
 
     }
