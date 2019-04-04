@@ -31,12 +31,6 @@ public class ApresentacaoActivity extends AppCompatActivity {
     private void ApresentarMarca() {
 
 
-
-
-
-
-
-
     }
 
     public void SIM(View view) {
