@@ -50,7 +50,16 @@ public class ListarTodosActivity extends AppCompatActivity {
     }
 
     public void Delete(View view) {
+
         Intent intent = new Intent(this, ApresentacaoActivity.class);
         startActivity(intent);
+
+    }
+
+    public void EDITAR(View view) {
+
+        Intent intent = new Intent(this, RegistoActivity.class);
+        startActivity(intent);
+
     }
 }

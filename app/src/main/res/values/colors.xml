@@ -7,4 +7,8 @@
     <color name="colorV">#B4F60606</color>
     <color name="colorA">#0DF4D2</color>
     <color name="colorB">#B4F8F6F6</color>
+
+    <color name="colorS">#46555353</color>
+    <color name="colorN">#B4F60606</color>
+    <color name="colorP">#B4F60606</color>
 </resources>

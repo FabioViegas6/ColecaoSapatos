@@ -9,7 +9,7 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSim"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
         android:layout_marginStart="32dp"
@@ -17,10 +17,10 @@
         android:layout_marginTop="8dp"
 
         android:layout_marginBottom="@dimen/marginSecun"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorS"
         android:onClick="SIM"
         android:text="SIM"
-        android:textColor="@color/colorB"
+        android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,22 +28,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonNao"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="@dimen/marginSecun"
-        android:background="@color/colorA"
+        android:background="@color/colorS"
         android:onClick="NAO"
         android:text="NÃO"
         android:textAllCaps="false"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Pretende eliminar o item selecionado"
+        android:textAllCaps="false"
+        android:textAppearance="@android:style/TextAppearance.Widget.PopupMenu.Large"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
