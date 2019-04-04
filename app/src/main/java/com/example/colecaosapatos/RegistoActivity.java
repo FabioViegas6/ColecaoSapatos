@@ -27,11 +27,14 @@ public class RegistoActivity extends AppCompatActivity {
       //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         FuncaoData();
+        EditarItens();
     }
 
 
     public void Cancel(View view) {
+        
         finish();
+
     }
 
 
@@ -117,11 +120,33 @@ public class RegistoActivity extends AppCompatActivity {
         return mes;
     }
 
-
     private int ANO() {
         Calendar a = Calendar.getInstance();
         int ano = a.get(Calendar.YEAR);
         return ano;
+    }
+
+
+
+    // todo- função para editar os itens pedidos
+
+    private void EditarItens() {
+
+        Intent intent = getIntent();
+
+        EditText textInputLayoutMarca = (EditText) findViewById(R.id.editTextMarca);
+        EditText editTestPreco = (EditText) findViewById(R.id.editTestPreco);
+        EditText editTextAno = (EditText) findViewById(R.id.editTextAno);
+
+        String marcas = intent.getStringExtra(ApresentacaoActivity.MARCA);
+        String preco = intent.getStringExtra(ApresentacaoActivity.MONTANTE);
+
+
+        textInputLayoutMarca.setText(marcas);
+        editTestPreco.setText(preco);
+
+        return;
+
     }
 
 

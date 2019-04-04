@@ -9,13 +9,18 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Calendar;
+import java.util.Date;
 
 
 public class ListarTodosActivity extends AppCompatActivity {
 
     //todo - clase (Atributo)
+
     private AlertDialog alerta;
 
     @Override
@@ -29,7 +34,11 @@ public class ListarTodosActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         LISTARTODOS();
+     //   FuncaoData();
+
     }
+
+
 
     private void LISTARTODOS() {
 
@@ -70,13 +79,14 @@ public class ListarTodosActivity extends AppCompatActivity {
         // todo- implementação de uma mensagem (Define)
         caixadedialo.setMessage("Pretende eliminar o item?");
 
+
         // todo- implementação do botão positivo (Define)
 
         caixadedialo.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                // todo- envia uma mensagem a dizer "item eliminado" caso a mensagem for aceite 
+                // todo- envia uma mensagem a dizer "item eliminado" caso a mensagem for aceite
 
                 Toast.makeText(ListarTodosActivity.this, "Item eliminado", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
@@ -109,8 +119,37 @@ public class ListarTodosActivity extends AppCompatActivity {
 
     public void EDITAR(View view) {
 
+
+        TextView textViewMarca = (TextView) findViewById(R.id.textViewMarca);
+        TextView textViewPreco = (TextView) findViewById(R.id.textViewPreco);
+        TextView textViewAno = (TextView) findViewById(R.id.textViewAno);
+
+        String nomemarca = textViewMarca.getText().toString();
+        String montante = textViewPreco.getText().toString();
+        String ano = textViewAno.getText().toString();
+
+
         Intent intent = new Intent(this, RegistoActivity.class);
+
+        // todo: para apresentar a marca
+
+        intent.putExtra(ApresentacaoActivity.MARCA, nomemarca);
         startActivity(intent);
 
+        // todo: para apresentar a preço
+
+        intent.putExtra(ApresentacaoActivity.MONTANTE, montante);
+        startActivity(intent);
+
+        // todo: para apresentar a data
+
+
+        intent.putExtra(ApresentacaoActivity.DATA, ano);
+        startActivity(intent);
+        finish();
+        return;
+
     }
+
+
 }
