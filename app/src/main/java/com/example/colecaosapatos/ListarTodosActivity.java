@@ -33,8 +33,8 @@ public class ListarTodosActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // todo- função
         LISTARTODOS();
-     //   FuncaoData();
 
     }
 
@@ -90,6 +90,7 @@ public class ListarTodosActivity extends AppCompatActivity {
 
                 Toast.makeText(ListarTodosActivity.this, "Item eliminado", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
+                finish();
             }
         });
 

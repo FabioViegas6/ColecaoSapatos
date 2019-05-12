@@ -19,6 +19,7 @@ public class ApresentacaoActivity extends AppCompatActivity {
     public static final String MARCA = "marca";
     public static final String MONTANTE = "Preco";
     public static final String DATA = "Ano";
+    public static final String COR = "Cor";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

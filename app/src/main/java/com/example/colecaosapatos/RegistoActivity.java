@@ -45,10 +45,12 @@ public class RegistoActivity extends AppCompatActivity {
         EditText textInputLayoutMarca = (EditText) findViewById(R.id.editTextMarca);
         EditText editTestPreco = (EditText) findViewById(R.id.editTestPreco);
         EditText editTextAno = (EditText) findViewById(R.id.editTextAno);
+     //   EditText editTextCor = (EditText) findViewById(R.id.editTextCor);
 
         String nomemarca = textInputLayoutMarca.getText().toString();
         String montante = editTestPreco.getText().toString();
         String ano = editTextAno.getText().toString();
+       // String cor = editTextCor.getText().toString();
 
         if(nomemarca.trim().length() == 0) {
             textInputLayoutMarca.setError("Campo Obrigatorio" );
@@ -83,6 +85,12 @@ public class RegistoActivity extends AppCompatActivity {
         //intent.putExtra(ApresentacaoActivity.DATA, date);
         intent.putExtra(ApresentacaoActivity.DATA, ano);
         startActivity(intent);
+
+        // todo: para apresentar a cor
+
+       // intent.putExtra(ApresentacaoActivity.COR, cor);
+       // startActivity(intent);
+
 
 
         // todo: Para aparecer uma mensagem a dizer que os dados foram guardados
