@@ -8,8 +8,11 @@ import android.support.annotation.Nullable;
 public class BdColecaoSapatosOpenHelper extends SQLiteOpenHelper {
 
 
+    public static final String NOME_BASE_DADOS = "sapatos.db";
+    public static final int VERSION_BD = 1;
+
     public BdColecaoSapatosOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+        super(context, NOME_BASE_DADOS, null, VERSION_BD);
     }
 
     @Override
