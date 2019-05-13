@@ -1,18 +1,21 @@
 package com.example.colecaosapatos;
 
+import android.content.ContentValues;
+import android.database.Cursor;
+
 public class Sapatos {
 
-    private int id;
+    private long id;
     private String nomeS;
     private double preco;
-    private int idCategorias;
+    private long idCategorias;
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -32,13 +35,51 @@ public class Sapatos {
         this.preco = preco;
     }
 
-    public int getIdCategorias() {
+    public long getIdCategorias() {
         return idCategorias;
     }
 
-    public void setIdCategorias(int idCategorias) {
+    public void setIdCategorias(long idCategorias) {
         this.idCategorias = idCategorias;
     }
 
+
+    public ContentValues getContentValues() {
+
+        ContentValues valores = new ContentValues();
+
+        valores.put(BdTableSapatos.FIELD_NOME, nomeS);
+        valores.put(BdTableSapatos.FIELD_PRECO, preco);
+        valores.put(BdTableSapatos.ID_CATEGORIA, idCategorias);
+
+        return valores;
+
+    }
+
+    public static Sapatos fromCursor(Cursor cursor) {
+        long id = cursor.getLong(
+                cursor.getColumnIndex(BdTableSapatos._ID)
+        );
+
+        String nome = cursor.getString(
+                cursor.getColumnIndex(BdTableSapatos.FIELD_NOME)
+        );
+        double preco = cursor.getDouble(
+                cursor.getColumnIndex(BdTableSapatos.FIELD_PRECO)
+        );
+        long idCategoria = cursor.getLong(
+                cursor.getColumnIndex(BdTableSapatos.ID_CATEGORIA)
+        );
+
+        Sapatos sapatos = new Sapatos();
+
+        sapatos.setId(id);
+        sapatos.setIdCategorias(idCategoria);
+        sapatos.setNomeS(nome);
+        sapatos.setPreco(preco);
+
+        return sapatos;
+
+    }
 
 }
