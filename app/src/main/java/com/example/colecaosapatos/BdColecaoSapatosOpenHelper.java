@@ -18,7 +18,9 @@ public class BdColecaoSapatosOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        new BdTableCategorias(db).cria();
+        new BdTableCategorias(db).create();
+        new BdTableSapatos(db).create();
+        new BdTableCor(db).create();
 
     }
 

@@ -16,7 +16,7 @@ public class BdTableSapatos implements BaseColumns {
         this.db = db;
     }
 
-    public void cria(){
+    public void create(){
 
         db.execSQL(
         "CREATE TABLE " + NOME_TABELA + "(" +
