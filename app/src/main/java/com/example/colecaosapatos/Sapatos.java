@@ -39,4 +39,6 @@ public class Sapatos {
     public void setIdCategorias(int idCategorias) {
         this.idCategorias = idCategorias;
     }
+
+
 }
