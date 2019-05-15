@@ -11,10 +11,15 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView listarDados;
     private FloatingActionButton buton;
+
+    ViewPager galeria;
 
 
 
@@ -27,14 +32,60 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        // todo: Chamar a galeria de imagens na activity
+        // todo: ------------------------------------ Chamar a classe da galeria de imagens na activity -----------------------------------------------
 
-        ViewPager galeria = (ViewPager) findViewById(R.id.galeria);
+         galeria = (ViewPager) findViewById(R.id.galeria);
         GaleriaImagemAdapter adapter = new GaleriaImagemAdapter(this);
         galeria.setAdapter(adapter);
 
+
+       // galeria.setCurrentItem(1, true);
+        Timer timer = new Timer();
+        timer.schedule(new Tempo(),4000, 2000 );
+
         apresentacaoMarca();
     }
+
+
+    ///////////////////////////////////////////////////////////////////////////7
+   //todo: ------------------------------------------------------ codigo para o tempo -----------------------------------------------------------------
+
+    public class Tempo extends java.util.TimerTask{
+
+        @Override
+        public void run() {
+            MainActivity.this.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if(galeria.getCurrentItem()==0) {
+                        galeria.setCurrentItem(1);
+
+                    }else if (galeria.getCurrentItem()==1){
+                    galeria.setCurrentItem(2);
+
+                }else if (galeria.getCurrentItem()==2){
+                    galeria.setCurrentItem(3);
+
+                }else if (galeria.getCurrentItem()==3){
+                        galeria.setCurrentItem(4);
+
+                    }else if (galeria.getCurrentItem()==4){
+                        galeria.setCurrentItem(5);
+
+                    }else if (galeria.getCurrentItem()==5){
+                        galeria.setCurrentItem(6);
+
+                    }else if (galeria.getCurrentItem()==6) {
+                        galeria.setCurrentItem(0);
+
+                    }
+                }
+            });
+
+        }
+    }
+
+/////////////////////////////////////////////////////////////777777777
 
 
 

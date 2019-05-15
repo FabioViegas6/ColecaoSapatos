@@ -46,7 +46,7 @@ public class GaleriaImagemAdapter extends PagerAdapter {
         ImageView imagem = new ImageView(context);
 
         imagem.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imagem.setImageResource(imagens[position]);
+        imagem.setImageResource(imagens[position+1]);
         ((ViewPager) pager).addView(imagem);
 
         return imagem;
