@@ -26,8 +26,6 @@ public class BdSapatosTest {
     }
 
 
-
-
     @Test
     public void criaBdSapatos() {
         // Context of the app under test.

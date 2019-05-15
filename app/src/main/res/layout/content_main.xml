@@ -10,21 +10,6 @@
     tools:showIn="@layout/activity_main" >
 
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerViewMarca"
-        android:layout_width="match_parent"
-        android:layout_height="344dp"
-        android:layout_marginStart="@dimen/marginPadrao"
-        android:layout_marginLeft="@dimen/marginPadrao"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="@dimen/marginPadrao"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonListar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -100,5 +85,22 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonNovoRegisto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/galeria"
+        android:layout_width="395dp"
+        android:layout_height="375dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/buttonListar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 
 </android.support.constraint.ConstraintLayout>

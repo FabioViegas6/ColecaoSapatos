@@ -3,6 +3,7 @@ package com.example.colecaosapatos;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -25,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+
+        // todo: Chamar a galeria de imagens na activity
+
+        ViewPager galeria = (ViewPager) findViewById(R.id.galeria);
+        GaleriaImagemAdapter adapter = new GaleriaImagemAdapter(this);
+        galeria.setAdapter(adapter);
 
         apresentacaoMarca();
     }
@@ -55,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void apresentacaoMarca() {
          Intent intent = getIntent();
-        listarDados = (RecyclerView) findViewById(R.id.recyclerViewMarca);
+        //  listarDados = (RecyclerView) findViewById(R.id.recyclerViewMarca);
 
     }
 
